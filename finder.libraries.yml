@@ -16,6 +16,7 @@ finder:
     js/cwd_popups.js: {}
     js/cwd_gallery.js: {}
     js/cwd_utilities.js: {}
+    https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js: { type: external }
   dependencies:
     - core/jquery
     - core/drupal

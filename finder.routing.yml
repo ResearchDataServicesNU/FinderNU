@@ -2,7 +2,7 @@ finder.content:
   path: '/finder'
   defaults:
     _controller: '\Drupal\finder\Controller\FinderController::content'
-    _title: 'Finder'
+    _title: 'NUFinder'
   requirements:
     _permission: 'access content'
 finder.facettree:

@@ -25,17 +25,16 @@
     // WHAT IS THIS MUSTACHE STUFF ??? :-)
     // see:  http://mustache.github.io/mustache.5.html
 
-    $.Mustache.add("question-checkbox-template",
-        "{{#questions}}\
+  $.Mustache.add("question-checkbox-template",
+    "{{#questions}}\
         <li>\
         <div class='question-wrapper'>\
         <h4 id='question-{{id}}'>{{question}}</h4>\
-        <a aria-haspopup='true' class='popup' data-hidden='true' href='#explanation-{{id}}''>\
-            <span class='fa fa-info-circle' aria-hidden='true'></span>\
+        <a class='control-indicator collapsed' data-toggle='collapse' aria-expanded='false' aria-controls='explanation - {{ id }}' href='#explanation-{{id}}'>\
             <span class='sr-only'>More info about {{question}}</span>\
         </a>\
         </div>\
-        <div class='help' id='explanation-{{id}}'><h3>{{question}}</h3><p>{{{description}}}</p></div>\
+        <div class='help' id='explanation-{{id}}'><p>{{{description}}}</p></div>\
         <fieldset aria-labelledby='question-{{id}}'>\
         {{#choices}}\
             <div class='checkbox' facetid='{{id}}'>\
@@ -275,7 +274,7 @@
             chart = chart + "<tr>";
             chart = chart + "<th scope='row'>"+servicelist[0].field_data[field].label;
             help_text_counter++;
-            help =  servicehelp.field_data[field].value ? "<a class='popup' aria-haspop='true' href='#help-"+help_text_counter+"'><span class='sr-only'>More information about "+servicelist[0].field_data[field].label+"</span><span class='fa fa-info-circle'></span></a><div class='help' id='help-"+help_text_counter+"'><h3>"+servicelist[0].field_data[field].label+"</h3>"+servicehelp.field_data[field].value+"</div>" : "";
+            help = servicehelp.field_data[field].value ? "<a class='control-indicator collapsed' data-toggle='collapse' aria-expanded='false' href='#help-" + help_text_counter + "'><span class='sr-only'>More information about " + servicelist[0].field_data[field].label + "</span><span class='fa fa-info-circle'></span></a><div class='help-table collapse' id='help-" + help_text_counter + "'><p>"+servicehelp.field_data[field].value+"</p> </div>" : "";
             chart = chart + help;
             chart = chart +"</th>"; // row title
                 for (var j=0;j<servicelist.length;j++) {
@@ -569,7 +568,7 @@ function validateEmail(Email) {
             emailaddresses.push(email);
         }
         if ($("#emailtordmsg").prop("checked")) {
-            emailaddresses.push("rich.marisa@gmail.com"); // rdmsg-services@cornell.edu
+            emailaddresses.push("logamit98@gmail.com");
         }
         if (emailaddresses.length > 0) {
             var csrf_token;
