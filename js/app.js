@@ -36,6 +36,7 @@
         </div>\
         <div class='help' id='explanation-{{id}}'><p>{{{description}}}</p></div>\
         <fieldset aria-labelledby='question-{{id}}'>\
+        <legend class='sr-only'>Answer Choices for {{question}}</legend>\
         {{#choices}}\
             <div class='checkbox' facetid='{{id}}'>\
             <label for='facet-{{id}}'>\
