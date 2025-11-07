@@ -223,14 +223,24 @@ h2.sub-heading.heading-services {
     font-size: 1.4em;
     margin-bottom: 1em;
     margin-left: 2px; }
+  #questionlist li fieldset div legend {
+      font-size: 0.9em;
+      font-weight: bold;
+      color: #c8102e;
+      border: none !important;
+      display: inline;
+  }
   #questionlist .question-wrapper {
-    margin: 10px 0; }
+    margin: 10px 0; 
+  }
     #questionlist .question-wrapper a {
-      font-size: 0.8em; }
+      font-size: 0.9em; 
+      text-decoration: none !important;
+    }
       #questionlist .question-wrapper a .fa {
-        margin: 0; }
-    #questionlist .question-wrapper h4 {
-      display: inline; }
+        margin: 0; 
+        text-decoration: none !important;
+      }
   #questionlist h4 {
     font-weight: bold;
     font-size: 16px;
