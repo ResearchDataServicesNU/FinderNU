@@ -28,13 +28,15 @@
   $.Mustache.add("question-checkbox-template",
     "{{#questions}}\
         <li>\
-        <fieldset aria-lablledby='question-{{id}}'>\
+        <fieldset aria-labelledby='question-{{id}}'>\
         <div class='question-wrapper'>\
-        <legend id='question-{{id}}'>{{question}}</legend>\
-        <a class='control-indicator collapsed' data-toggle='collapse' aria-expanded='false' aria-controls='explanation - {{ id }}' href='#explanation-{{id}}'>\
-            <span class='sr-only'>More info about {{question}}</span>\
-        </a>\
+        <span class='question-text'>{{question}}</span>\
+        <a class='control-indicator collapsed' data-toggle='collapse' aria-expanded='false'\
+        aria-controls='explanation-{{id}}' href='#explanation-{{id}}'></a>\
         </div>\
+        <legend id='question-{{id}}'>\
+        <span class='sr-only'>{{question}}</span>\
+        </legend>\
         <div class='help' id='explanation-{{id}}'><p>{{{description}}}</p></div>\
         {{#choices}}\
             <div class='checkbox' facetid='{{id}}'>\

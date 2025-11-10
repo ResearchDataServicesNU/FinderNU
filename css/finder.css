@@ -223,13 +223,6 @@ h2.sub-heading.heading-services {
     font-size: 1.4em;
     margin-bottom: 1em;
     margin-left: 2px; }
-  #questionlist li fieldset div legend {
-      font-size: 0.9em;
-      font-weight: bold;
-      color: #c8102e;
-      border: none !important;
-      display: inline;
-  }
   #questionlist .question-wrapper {
     margin: 10px 0; 
   }
@@ -284,6 +277,17 @@ h2.sub-heading.heading-services {
       background-color: #5e6caa; }
     #questionlist .explanation .panel-heading, #questionlist .explanation .panel-primary {
       border-color: #38416a; }
+
+.question-text {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #c8102e;
+    display: inline; 
+  }
+
+legend {
+  border: none !important;
+}
 
 .mismatch {
   opacity: 0.35; }
